@@ -29,7 +29,7 @@
                        (errors/throwf "Automatic resolution of mmap pathways is disabled for graal native.
 Please use 'tech.3.datatype.mmap/set-mmap-impl!' prior to calling mmap-file.")
                        (let [jdk-16-fn
-                             (when (.startsWith (System/getProperty "java.version") "16-")
+                             (when (.startsWith (System/getProperty "java.version") "16")
                                (try
                                  (requiring-resolve 'tech.v3.datatype.mmap.mmodel/mmap-file)
                                  (catch Throwable e
